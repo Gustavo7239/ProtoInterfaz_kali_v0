@@ -8,11 +8,11 @@ fi
 
 IP=$1
 
-# Ejecuta nmap y guarda la salida
-SCAN_OUTPUT=$(sudo nmap -O -sV "$IP")
+# Ejecuta nmap con opciones optimizadas
+SCAN_OUTPUT=$(sudo nmap -O -sV --min-rate=1000 --max-retries=1 --host-timeout=30s "$IP")
 
-# Extrae la información del sistema operativo
-SO_INFO=$(echo "$SCAN_OUTPUT" | grep -i "OS details:" | sed 's/OS details://g' | xargs)
+# Extrae la información del sistema operativo, solo el primer nombre antes de la coma
+SO_INFO=$(echo "$SCAN_OUTPUT" | grep -i "OS details:" | sed 's/OS details://g' | cut -d',' -f1 | xargs)
 
 # Extrae la información de los puertos y servicios
 PORTS_INFO=$(echo "$SCAN_OUTPUT" | grep -E "^[0-9]+/tcp" | awk '{print "Port: " $1 "   Service: " $3}')
