@@ -1,10 +1,9 @@
 #!/bin/bash
-
+echo "---------------------[Lista de interfaz]--------------------"
 ./Interface-List.sh
 
 # Solicita la entrada del usuario
-echo "Introduce algo: "
-read resultado
+echo -e "\n\n--------------[Introduce la interfaz a elegir]--------------"
+read -p "> " resultado
 
-# Imprime el resultado
-echo "Has introducido: $resultado"
+./Ips-x-Interface.sh $resultado
