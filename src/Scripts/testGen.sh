@@ -2,8 +2,12 @@
 echo "---------------------[Lista de interfaz]--------------------"
 ./Interface-List.sh
 
-# Solicita la entrada del usuario
 echo -e "\n\n--------------[Introduce la interfaz a elegir]--------------"
-read -p "> " resultado
+read -p "> " interface
 
-./Ips-x-Interface.sh $resultado
+./Ips-x-Interface.sh $interface
+
+echo -e "\n\n--------------[Introduce la IP a escanear]--------------"
+read -p "> " direccionIP
+
+./PortScanning.sh $direccionIP
