@@ -41,3 +41,5 @@ if __name__ == '__main__':
     output_label.grid(row=0, column=1, padx=10, pady=10, rowspan=len(script_names))
 
     root.mainloop()
+
+#test project
