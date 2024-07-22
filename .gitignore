@@ -1,0 +1,41 @@
+# Archivos de compilación
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+
+# Directorios de compilación
+build/
+dist/
+*.egg-info/
+*.egg
+
+# Entornos virtuales
+venv/
+env/
+.venv/
+
+# Archivos de configuración de entornos
+.env
+
+# Archivos de bases de datos locales
+*.sqlite3
+*.db
+
+# Archivos de configuración de IDEs y editores
+.vscode/
+.idea/
+*.sublime-workspace
+*.sublime-project
+
+# Archivos de logs
+*.log
+
+# Sistema de archivos
+.DS_Store
+Thumbs.db
+
+# Archivos temporales
+*.tmp
+*.swp
+*.swo
