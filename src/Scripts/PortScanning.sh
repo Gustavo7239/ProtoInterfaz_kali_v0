@@ -9,7 +9,7 @@ fi
 IP=$1
 
 # Ejecuta nmap con opciones optimizadas
-SCAN_OUTPUT=$(sudo nmap -O -sV --min-rate=1000 --max-retries=1 --host-timeout=30s "$IP")
+SCAN_OUTPUT=$(sudo nmap -O -sV "$IP")
 
 # Extrae la información del sistema operativo, solo el primer nombre antes de la coma
 SO_INFO=$(echo "$SCAN_OUTPUT" | grep -i "OS details:" | sed 's/OS details://g' | cut -d',' -f1 | xargs)
