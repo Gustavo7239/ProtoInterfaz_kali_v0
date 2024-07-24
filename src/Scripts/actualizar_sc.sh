@@ -17,5 +17,5 @@ else
     # Copiar el archivo desde la ubicación de origen a la ubicación de destino
     cp "$SOURCE_FILE" "$DEST_FILE"
     echo "El archivo UpdateProto se ha copiado al directorio padre del proyecto."
+    sudo chmod +x $DEST_FILE
 fi
-/home/kali/Desktop/ProtoInterfaz_kali_v0/../UpdateProto
