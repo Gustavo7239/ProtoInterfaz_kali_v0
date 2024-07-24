@@ -5,7 +5,7 @@ PROJECT_ROOT="$(dirname "$(dirname "$(dirname "$0")")")"
 
 # Definir la ruta del archivo origen y destino
 SOURCE_FILE="$PROJECT_ROOT/src/Tools/UpdateProto"
-DEST_FILE="$PROJECT_ROOT/../UpdateProto"
+DEST_FILE="$(dirname "$PROJECT_ROOT")/UpdateProto"
 
 echo "La ruta de origen es: $SOURCE_FILE"
 echo "La ruta de destino es: $DEST_FILE"
@@ -18,3 +18,4 @@ else
     cp "$SOURCE_FILE" "$DEST_FILE"
     echo "El archivo UpdateProto se ha copiado al directorio padre del proyecto."
 fi
+/home/kali/Desktop/ProtoInterfaz_kali_v0/../UpdateProto
