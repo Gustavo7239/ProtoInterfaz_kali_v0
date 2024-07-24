@@ -4,8 +4,8 @@
 PROJECT_ROOT="$(dirname "$(dirname "$(dirname "$0")")")"
 
 # Definir la ruta del archivo origen y destino
-SOURCE_FILE="$PROJECT_ROOT/src/Tools/UpdateProto"
-DEST_FILE="$(dirname "$PROJECT_ROOT")/UpdateProto"
+SOURCE_FILE="$PROJECT_ROOT/src/Tools/UpdateProto.sh"
+DEST_FILE="$(dirname "$PROJECT_ROOT")/UpdateProto.sh"
 
 echo "La ruta de origen es: $SOURCE_FILE"
 echo "La ruta de destino es: $DEST_FILE"
